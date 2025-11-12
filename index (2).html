@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bharat Hardware Electricals & Tools (BHET)</title>
+  <meta name="description" content="Buy tools, electrical items, hardware at Bharat Hardware Electricals & Tools, Nandura, Buldhana.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO tags -->
+  <meta name="keywords" content="Power Tools, Hardware, Electrical, Hand Tools, Nandura, Buldhana, Bharat Hardware Electricals & Tools">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; margin: 0; color: #222; background: #fafafa;}
+    header, nav, main, section, footer { max-width: 1100px; margin: 0 auto; }
+    header { background: #1a2956; color: #fff; padding: 1.5em 1em;}
+    nav ul { list-style: none; padding: 0; display: flex; gap: 2em; }
+    nav a { color: #1a2956; font-weight: bold; text-decoration: none; }
+    .category-list { display: flex; flex-wrap: wrap; gap: 2em; margin:2em 0;}
+    .category-card { background: #fff; padding: 1.5em; flex: 1 1 230px; border-radius: 7px; box-shadow: 0 1px 4px #ccc;}
+    .category-card h3 { margin-top:0;}
+    .products-grid { display:flex; flex-wrap: wrap; gap: 2em; }
+    .product-card { background: #fff; padding: 1em; border-radius: 8px; box-shadow: 0 2px 8px #ddd; flex:1 1 230px; min-width:230px;}
+    .product-card h4 { margin: .2em 0; }
+    .product-card .price { font-weight: bold; color: #D94B39;}
+    .btn { background: #D94B39; color: #fff; border: none; padding: .6em 2em; border-radius: 6px; cursor: pointer;}
+    section { margin-bottom: 2em;}
+    .contact-form { background: #f7f7f7; padding: 2em; border-radius: 12px; max-width:550px;}
+    .contact-form input, .contact-form textarea { width: 95%; padding: .7em; margin-bottom: 1em; border-radius:4px; border:1px solid #aaa;}
+    .contact-form button { width:100%;}
+    .about-cards { display: flex; gap: 1.5em;}
+    .about-card { padding: 1em; background: #eaeaea; border-radius: 6px; flex:1;}
+    footer { background: #1a2956; color: #fff; padding: 2em 1em; margin-top:3em;}
+    @media (max-width: 800px) {
+      .category-list, .products-grid, .about-cards { flex-direction: column; gap:1em;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Bharat Hardware Electricals & Tools (BHET)</h1>
+    <p>Your Trusted Partner for Quality Tools, Electricals, and Hardware in Nandura, Buldhana</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About Us</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Welcome to BHET!</h2>
+      <p>Explore our broad range of power tools, hand tools, electrical items and hardware. We serve Nandura, Buldhana and surrounding regions with quality products and expert service.</p>
+      <div style="margin-top:2em;">
+        <a href="#products" class="btn">Browse Products</a>
+        <a href="#contact" class="btn">Contact Us</a>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories">
+      <h2>Categories</h2>
+      <div class="category-list">
+        <div class="category-card">
+          <h3>Tools</h3>
+          <p>Power Tools, Hand Tools, Electric Tools</p>
+        </div>
+        <div class="category-card">
+          <h3>Electrical Items</h3>
+          <p>Wires, Lighting, Switches, Circuit Protection, Accessories</p>
+        </div>
+        <div class="category-card">
+          <h3>Hardware</h3>
+          <p>Fasteners, Plumbing, Door, Safety & More</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Listing Section -->
+    <section id="products">
+      <h2>Product Listings</h2>
+      <input id="search" type="text" placeholder="Search products..." style="width:100%; max-width:500px; margin-bottom:2em; padding:.8em; font-size:1em;" onkeyup="showProducts()">
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <div class="contact-form">
+        <form name="enquiry" autocomplete="off" onsubmit="return showContactSuccess(event)">
+          <input type="text" name="name" required placeholder="Your Name">
+          <input type="text" name="phone" required placeholder="Your Phone Number">
+          <input type="email" name="email" required placeholder="Your Email">
+          <select name="interest" required>
+            <option value="">Interested in...</option>
+            <option>Tools</option>
+            <option>Electrical Items</option>
+            <option>Hardware</option>
+            <option>General Enquiry</option>
+          </select>
+          <textarea name="message" required placeholder="Message / Requirements"></textarea>
+          <button class="btn" type="submit">Send Enquiry</button>
+        </form>
+        <div id="contactSuccessMsg" style="color:#197d3f;display:none;font-weight:bold;">Thank you! We will contact you within 24 hours.</div>
+      </div>
+      <div style="margin-top:1em;">
+        <p><b>Call us:</b> <a href="tel:7768082083">7768082083</a></p>
+        <p><b>Email:</b> <a href="mailto:info@bharathardware.com">info@bharathardware.com</a></p>
+        <p><b>Location:</b> Post Nandura, Dist. Buldhana, Maharashtra</p>
+        <iframe src="https://maps.google.com/maps?q=Nandura, Buldhana&t=&z=10&ie=UTF8&iwloc=&output=embed" width="95%" height="200" style="border:1px solid #ddd; border-radius:7px;"></iframe>
+      </div>
+      <div style="margin-top:1em;">
+        <p><b>Business Hours:</b> Mon-Sat 9am–7pm</p>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>BHET aims to provide high-quality tools, electrical supplies, and hardware at competitive prices, backed by expert advice and fast service. Established in the heart of Nandura, we proudly serve contractors, electricians, and DIY enthusiasts across Buldhana and beyond.</p>
+      <div class="about-cards">
+        <div class="about-card"><b>Wide Product Range</b><br>Branded, certified products for all needs.</div>
+        <div class="about-card"><b>Quality & Trust</b><br>Quality guaranteed. Trusted locally.</div>
+        <div class="about-card"><b>Expertise & Support</b><br>Professional product advice, fast service.</div>
+        <div class="about-card"><b>Local Delivery</b><br>Serving Nandura, Buldhana & nearby.</div>
+        <div class="about-card"><b>Competitive Pricing</b><br>Best prices, great value, fast quotations.</div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div>
+      Bharat Hardware Electricals & Tools, Nandura, Buldhana | 7768082083 | info@bharathardware.com
+    </div>
+    <div>
+      &copy; 2025 BHET. All rights reserved. | Serving Nandura, Buldhana, Maharashtra
+    </div>
+  </footer>
+
+  <script>
+  // Editable Product Data -- add/remove/update products here!
+  const productsData = [
+    // Tools Category
+    {id: 'PT001', name: 'Bosch Angle Grinder', category: 'Tools', subcategory:'Power Tools', price: '₹3,500', specs: '850W, 4-inch disc, Variable speed', desc: 'Professional-grade angle grinder for cutting and grinding.' },
+    {id: 'PT002', name: 'Makita Impact Drill', category: 'Tools', subcategory:'Power Tools', price: '₹5,200', specs: '13mm chuck, 710W, Variable speed control', desc: 'Heavy-duty drill for concrete and masonry.' },
+    {id: 'HT001', name: 'Stanley Hammer Set', category: 'Tools', subcategory:'Hand Tools', price: '₹850', specs: '3-piece set, Steel construction, Rubber grip', desc: 'Durable hammer set for carpentry.' },
+    {id: 'HT002', name: 'Taparia Screwdriver Kit', category: 'Tools', subcategory:'Hand Tools', price: '₹650', specs: '12-piece set, Magnetic tips, Ergonomic handle', desc: 'Complete screwdriver kit for various needs.' },
+    {id: 'ET001', name: 'Digital Multimeter', category: 'Tools', subcategory:'Electric Tools', price: '₹1,100', specs: 'AC/DC voltage, Current, Resistance, LCD', desc: 'Reliable multimeter for electrical tasks.' },
+
+    // Electrical Items Category
+    {id: 'EI001', name: 'Copper Wire Bundle', category: 'Electrical Items', subcategory:'Wires', price: '₹450/meter', specs: '2.5 sq mm, 90m coil, ISI', desc: 'High-quality copper wire for wiring.' },
+    {id: 'EI002', name: 'Modular Switch Set', category: 'Electrical Items', subcategory:'Switches', price: '₹180', specs: '6A/16A, White/Ivory, ISI', desc: 'Premium modular switches.' },
+    {id: 'EI003', name: 'LED Bulb Pack', category: 'Electrical Items', subcategory:'Lighting', price: '₹320', specs: '9W, pack of 4, cool white', desc: 'Energy-efficient LED bulbs.' },
+    {id: 'EI004', name: 'Circuit Breaker MCB', category: 'Electrical Items', subcategory:'Circuit Protection', price: '₹280', specs: '32A, single pole, ISI', desc: 'Safety circuit breaker for panels.' },
+    {id: 'EI005', name: 'Extension Board', category: 'Electrical Items', subcategory:'Accessories', price: '₹550', specs: '4 sockets, 5m cable, surge protected', desc: 'Multi-use extension board.' },
+    {id: 'EI006', name: 'PVC Conduit Pipe', category: 'Electrical Items', subcategory:'Accessories', price: '₹35/meter', specs: '25mm diameter, 3m length, ISI', desc: 'Durable PVC pipe for cable protection.' },
+
+    // Hardware Category
+    {id: 'HW001', name: 'Steel Nuts & Bolts Kit', category: 'Hardware', subcategory:'Fasteners', price: '₹480', specs: '50 pcs, Steel, M6-M10', desc: 'Mixed nuts and bolts for hardware use.' },
+    {id: 'HW002', name: 'Door Hinges Set', category: 'Hardware', subcategory:'Door Hardware', price: '₹210', specs: '4pcs, 3-inch SS', desc: 'Stainless steel hinges for doors.' },
+    {id: 'HW003', name: 'Plumbing Pipe Clamp', category: 'Hardware', subcategory:'Plumbing', price: '₹50', specs: 'Pack of 10, Plastic', desc: 'Clamps for securing pipes.' },
+    {id: 'HW004', name: 'Safety Gloves', category: 'Hardware', subcategory:'Safety', price: '₹150', specs: 'Cotton, anti-slip, universal size', desc: 'Protective gloves for work safety.' }
+    // Add more as needed...
+  ];
+
+  function showProducts() {
+    let grid = document.getElementById("productsGrid");
+    let searchVal = document.getElementById("search").value.toLowerCase();
+    let html = "";
+    productsData.filter(
+      p => p.name.toLowerCase().includes(searchVal) || p.category.toLowerCase().includes(searchVal)
+        || p.subcategory.toLowerCase().includes(searchVal) || p.desc.toLowerCase().includes(searchVal)
+    ).forEach(product => {
+      html += `<div class="product-card">
+        <h4>${product.name}</h4>
+        <div><b>Category:</b> ${product.category}${product.subcategory ? " — " + product.subcategory : ""}</div>
+        <div class="price">${product.price}</div>
+        <div><b>Specs:</b> ${product.specs}</div>
+        <div style="margin:.5em 0;">${product.desc}</div>
+        <button class="btn" onclick="scrollToContact('${product.name}')">Enquire Now</button>
+      </div>`;
+    });
+    grid.innerHTML = html;
+  }
+  showProducts();
+
+  function scrollToContact(productName) {
+    location.hash = "#contact";
+    setTimeout(function(){
+      document.querySelector('select[name="interest"]').value = "General Enquiry";
+      document.querySelector('textarea[name="message"]').value = "Enquiry about product: " + productName;
+      document.querySelector('input[name="name"]').focus();
+    },200);
+  }
+  function showContactSuccess(event) {
+    event.preventDefault();
+    document.getElementById("contactSuccessMsg").style.display = "block";
+    setTimeout(()=>{document.getElementById("contactSuccessMsg").style.display="none";}, 8000);
+    event.target.reset();
+    return false;
+  }
+  </script>
+</body>
+</html>
